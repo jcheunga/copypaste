@@ -19,6 +19,7 @@ export default class CopyContainer extends Component {
 		this.setState({
 			copyArr: tempCopyArr
 		});
+		this.props.addcopy();
 	}
 
 	_removeCopy = (id) => {
@@ -27,7 +28,8 @@ export default class CopyContainer extends Component {
 		tempCopyArr.splice(tempKey, 1);
 		this.setState({
 			copyArr: tempCopyArr
-		});	
+		});
+		this.props.removecopy();
 	}
 
 	render() {
@@ -50,3 +52,8 @@ export default class CopyContainer extends Component {
 		);
 	}
 }
+
+CopyContainer.propTypes = {
+	removecopy: PropTypes.func.isRequired,
+	addcopy: PropTypes.func.isRequired
+};

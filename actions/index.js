@@ -1,4 +1,5 @@
-import * as types from '../constants/ActionTypes'
+export const ADD_COPY = 'ADD_COPY'
+export const REMOVE_COPY = 'REMOVE_COPY'
 
 export function addCopy() {
   return {
@@ -11,4 +12,3 @@ export function removeCopy() {
     type: REMOVE_COPY
 	}
 }
-
