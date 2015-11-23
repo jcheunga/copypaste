@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import SingleCopy from '../components/SingleCopy';
 import { Panel } from 'react-bootstrap';
+import Animate from 'rc-animate';
 const styles = require('../less/main.less');
 
 export default class CopyContainer extends Component {
@@ -35,10 +36,12 @@ export default class CopyContainer extends Component {
 		);
 		return (
 			<div className="row">
+			<Animate transitionName="fade">
 			{copyGrid}
+			</Animate>
 			<div className="col-md-4">
 			<Panel>
-			<div style={{textAlign:"center"}} onClick={this._addCopy}>
+			<div style={{textAlign:"center", cursor:"pointer"}} onClick={this._addCopy}>
 			  <i style={{fontSize:"4em",color:"#286090"}}className="fa fa-plus"></i>
 			</div>
 			</Panel>

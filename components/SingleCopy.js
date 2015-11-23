@@ -16,7 +16,7 @@ export default class SingleCopy extends Component {
 	}
 
 	render() {
-		return (
+		return (			
 			<div className="col-md-4" key={this.props.key}>
 				<Panel>
 				<textarea className="form-control" style={{ width: '100%' }} rows="10" value={this.state.value}
@@ -32,7 +32,7 @@ export default class SingleCopy extends Component {
         <button style={{float:'right'}} className="btn btn-danger" onClick={this._handleRemove}>Remove</button>
         </div>
         </Panel>        
-      </div>
+      </div> 
 		);
 	}
 }
